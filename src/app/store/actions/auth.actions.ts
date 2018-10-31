@@ -7,8 +7,6 @@ export enum AuthActionTypes {
 
 export class LoadAuths implements Action {
   readonly type = AuthActionTypes.LoadAuths;
-  constructor(public payloads: string) {    
-  }
 }
 
 export class SetAuths implements Action {

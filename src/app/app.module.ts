@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 import { reducers, metaReducers } from './store/reducers';
 import { AppEffects } from './store/effects/app.effects';
 import { AuthEffects } from './store/effects/auth.effects';
+import {HttpClientModule} from "@angular/common/http";
 //import { environment } from '../../environments/environment';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AuthEffects } from './store/effects/auth.effects';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot([AppEffects, AuthEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
